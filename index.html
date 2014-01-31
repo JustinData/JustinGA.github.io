@@ -76,6 +76,20 @@
         'https://dl.dropboxusercontent.com/u/233105575/refresh_assets/Popular_HiVol.mp4',
         'https://dl.dropboxusercontent.com/u/233105575/refresh_assets/Rooftop_selfie_720.mp4',
       ];
+
+      var images = [
+        '1.jpg',
+        '2.jpg',
+        '3.jpg',
+        '4.jpg',
+        '5.jpg',
+        '6.jpg',
+        '7.jpg',
+        '8.jpg',
+        '9.jpg',
+        '10.jpg',
+      ];
+
       function getIndex() {
         var latest = getCookie('refresh_latest');
         var displayed = getCookie('refresh_displayed');
@@ -114,15 +128,17 @@
         return check; 
       }
 
-      if (mobilecheck()){
-        alert("mobile browser")
-      } else {
-        console.log("nope")
-      };
-
-
       var curUrl = videos[getIndex()];
-      var videoUrl = '<embed id="videoplayer" type="application/x-shockwave-flash" src="https://dl.dropboxusercontent.com/u/32613729/refresh/Cargo_vcr.swf?vid=%s" style="position: fixed; top: 0px; left: 0px; bottom: 0px; right: 0px; width: 100%; height: 100%;" id="flashObject" name="flashObject" bgcolor="000000" menu="no" quality="high" wmode="opaque">'.replace('%s', curUrl);
+      var curImg = images[getIndex()];
+      var videoUrl = '';
+
+      if (mobilecheck()){
+        alert("mobile browser " + curImg);
+        videoUrl = '<img src="https://www.google.com/images/srpr/logo11w.png" />';
+      } else {
+        videoUrl = '<embed id="videoplayer" type="application/x-shockwave-flash" src="https://dl.dropboxusercontent.com/u/32613729/refresh/Cargo_vcr.swf?vid=%s" style="position: fixed; top: 0px; left: 0px; bottom: 0px; right: 0px; width: 100%; height: 100%;" id="flashObject" name="flashObject" bgcolor="000000" menu="no" quality="high" wmode="opaque">'.replace('%s', curUrl);
+      };
+ 
       $('#container').html(videoUrl);
     });
   </script>
