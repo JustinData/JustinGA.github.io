@@ -28,8 +28,8 @@
       height: 6%;
       bottom: 18px;
     }
-    @media (max-width: 5000px) {
-      iframe {
+    @media (max-width: 1000px) {
+      #fb-share {
         visibility: hidden;
       }
       .twitter-share-button {
@@ -189,7 +189,7 @@
   </a>
   <div id='container'>
   </div>
-  <div class="fb-share-button" data-href="http://www.refreshthemovie.com" data-type="button"></div>
+  <div class="fb-share-button" id="fb-share" data-href="http://www.refreshthemovie.com" data-type="button"></div>
   <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.refreshthemovie.com" data-count="none">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 </body>
