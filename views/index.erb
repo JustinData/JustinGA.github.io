@@ -78,16 +78,16 @@
       ];
 
       var images = [
-        '1.jpg',
-        '2.jpg',
-        '3.jpg',
-        '4.jpg',
-        '5.jpg',
-        '6.jpg',
-        '7.jpg',
-        '8.jpg',
-        '9.jpg',
-        '10.jpg',
+        'https://www.dropbox.com/s/6xt8czyjde0drc9/Bookstore.png',
+        'https://www.dropbox.com/s/dm46nwat33b9ldd/Stuff_to_think_about.png',
+        'https://www.dropbox.com/s/689i904gt1c37xs/Girls_wanna_have_fun.png',
+        'https://www.dropbox.com/s/6fjvaliehy3ajvl/How_many_friends.png',
+        'https://www.dropbox.com/s/vgznisgp2t65zln/Ice_Cream.png',
+        'https://www.dropbox.com/s/ju3918sugnbdjbm/Lily_morning_laptop.png',
+        'https://www.dropbox.com/s/nuc8906ynrumoif/Lily_bathroom.png',
+        'https://www.dropbox.com/s/5e1ekqp5yrt1zni/Lily_bed_scene.png',
+        'https://www.dropbox.com/s/zb3gmj2349kc2um/Popular.png',
+        'https://www.dropbox.com/s/qd63r97ykg8zt5n/Rooftop_selfie.png',
       ];
 
       function getIndex() {
@@ -128,13 +128,13 @@
         return check; 
       }
 
-      var curUrl = videos[getIndex()];
-      var curImg = images[getIndex()];
+      var curIndex = getIndex();
+      var curUrl = videos[curIndex];
+      var curImg = images[curIndex];
       var videoUrl = '';
 
       if (mobilecheck()){
-        alert("mobile browser " + curImg);
-        videoUrl = '<img src="https://www.google.com/images/srpr/logo11w.png" />';
+        videoUrl = '<img src="%t" style="position: fixed; top: 0px; left: 0px; bottom: 0px; right: 0px; width: 100%; height: 100%;" /> <a href="%s"><img src="https://www.dropbox.com/s/vkbzarp4nxpf8vy/playbutton_noframe.png"></a>'.replace('%s', curUrl).replace('%t', curImg);
       } else {
         videoUrl = '<embed id="videoplayer" type="application/x-shockwave-flash" src="https://dl.dropboxusercontent.com/u/32613729/refresh/Cargo_vcr.swf?vid=%s" style="position: fixed; top: 0px; left: 0px; bottom: 0px; right: 0px; width: 100%; height: 100%;" id="flashObject" name="flashObject" bgcolor="000000" menu="no" quality="high" wmode="opaque">'.replace('%s', curUrl);
       };
