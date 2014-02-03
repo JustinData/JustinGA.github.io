@@ -134,7 +134,7 @@
       var videoUrl = '';
 
       if (mobilecheck()){
-        backgroundUrl = ' body{ background-image:url("%t"); background-repeat:no-repeat; } '.replace('%t', curImg);
+        backgroundUrl = ' body{ background-image:url("%t"); background-repeat:no-repeat; background-size: Auto 150px; background-position:center; } '.replace('%t', curImg);
 
         $("style").append(backgroundUrl);
         alert(backgroundUrl);
