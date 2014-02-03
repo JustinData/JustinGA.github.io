@@ -28,6 +28,11 @@
       height: 6%;
       bottom: 18px;
     }
+    @media screen and (max-width:830px) {
+      #twitter-widget-0 {
+        visibility: hidden;
+      }
+    }
   </style>
   <script>
     function getCookie(c_name)
@@ -140,8 +145,6 @@
 
         videoUrl = ' <a href="%s"><img src="https://dl.dropboxusercontent.com/s/vkbzarp4nxpf8vy/playbutton_noframe.png" style="position: relative; top: 50%; left: 50%; margin-top: -50px; margin-left: -100px;"></a> '.replace('%s', curUrl);
 
-        $("#twitter-widget-0").css("visibility", "hidden");
-        
       } else {
         videoUrl = '<embed id="videoplayer" type="application/x-shockwave-flash" src="https://dl.dropboxusercontent.com/u/32613729/refresh/Cargo_vcr.swf?vid=%s" style="position: fixed; top: 0px; left: 0px; bottom: 0px; right: 0px; width: 100%; height: 100%;" id="flashObject" name="flashObject" bgcolor="000000" menu="no" quality="high" wmode="opaque">'.replace('%s', curUrl);
       };
