@@ -134,9 +134,9 @@
       var videoUrl = '';
 
       if (mobilecheck()){
-        backgroundUrl = '{background-image:url("%t");}'.replace('%t', curImg);
+        backgroundUrl = ' body{ background-image:url("%t"); } '.replace('%t', curImg);
 
-        $("body").css(backgroundUrl);
+        $("style").append(backgroundUrl);
         alert(backgroundUrl);
 
         videoUrl = ' <a href="%s"><img src="https://dl.dropboxusercontent.com/s/vkbzarp4nxpf8vy/playbutton_noframe.png" ></a> '.replace('%s', curUrl).replace('%t', curImg);
