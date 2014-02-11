@@ -44,6 +44,13 @@
       height: 75px;
       bottom: 5px;
     }
+    .twitter_mobile_icon {
+      z-index: 1000;
+      position: absolute;
+      left: 55px;
+      height: 38px;
+      bottom: 5px;
+    }
     .tumblr_icon {
       z-index: 1000;
       position: absolute;
@@ -51,11 +58,25 @@
       height: 50px;
       bottom: 15px;
     }
+    .tumblr_mobile_icon {
+      z-index: 1000;
+      position: absolute;
+      left: 20px;
+      height: 25px;
+      bottom: 15px;
+    }
     .mail_icon {
       z-index: 1000;
       position: absolute;
       left: 210px;
       height: 40px;
+      bottom: 20px;
+    }
+    .mail_mobile_icon {
+      z-index: 1000;
+      position: absolute;
+      left: 105px;
+      height: 20px;
       bottom: 20px;
     }
 
@@ -173,9 +194,9 @@
 
         videoUrl = ' <a href="%s"><img src="https://dl.dropboxusercontent.com/s/njuc04vxuokpn6q/playbuttonnoframe-black189x193.png" style="position: absolute; top: 50%; left: 50%; margin-left: -95px; margin-top: -97px;"></a> '.replace('%s', curUrl);
 
-        $(".twitter_icon").height(35);
-        $(".mail_icon").height(20);
-        $(".tumblr_icon").height(25);
+        $(".twitter_icon").removeClass("twitter_icon").addClass("twitter_mobile_icon");
+        $(".mail_icon").removeClass("mail_icon").addClass("mail_mobile_icon");
+        $(".tumblr_icon").removeClass("tumblr_icon").addClass("tumblr_mobile_icon");
 
 
       } else {
