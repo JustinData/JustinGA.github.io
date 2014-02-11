@@ -33,6 +33,11 @@
       bottom: 10px;
       right: 50px;
     }
+    .social_mobile_container {
+      position: absolute;
+      bottom: 10px;
+      /*right: 50px;*/
+    }
 
     .fb-share-button {
       z-index: 1000;
@@ -46,9 +51,9 @@
     .twitter_icon {
       z-index: 1000;
       position: absolute;
-      left: 110px;
+      left: 72px;
       height: 75px;
-      bottom: 5px;
+      bottom: 3px;
     }
     .twitter_mobile_icon {
       z-index: 1000;
@@ -67,9 +72,9 @@
     .tumblr_mobile_icon {
       z-index: 1000;
       position: absolute;
-      left: 20px;
+      left: 13px;
       height: 25px;
-      bottom: 15px;
+      bottom: 10px;
     }
     .mail_icon {
       z-index: 1000;
@@ -81,9 +86,9 @@
     .mail_mobile_icon {
       z-index: 1000;
       position: absolute;
-      left: 105px;
+      left: 70px;
       height: 20px;
-      bottom: 20px;
+      bottom: 12px;
     }
 
     
@@ -204,6 +209,7 @@
         $(".mail_icon").removeClass("mail_icon").addClass("mail_mobile_icon");
         $(".tumblr_icon").removeClass("tumblr_icon").addClass("tumblr_mobile_icon");
         $(".refresh_icon").removeClass("tumblr_icon").addClass("refresh_mobile_icon");
+        $(".social_container").removeClass("tumblr_icon").addClass("social_mobile_container");
 
 
       } else {
